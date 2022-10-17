@@ -11,13 +11,16 @@
 	tools:context="com.example.fcm.MainActivity">
 
 	<ImageView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_width="171dp"
+		android:layout_height="130dp"
 		android:layout_above="@+id/zoneCenter"
 		android:layout_centerHorizontal="true"
-		android:layout_margin="@dimen/activity_horizontal_margin"
+		android:layout_marginStart="@dimen/activity_horizontal_margin"
+		android:layout_marginTop="@dimen/activity_horizontal_margin"
+		android:layout_marginEnd="@dimen/activity_horizontal_margin"
+		android:layout_marginBottom="180dp"
 		android:contentDescription="@string/app_name"
-		android:src="@mipmap/fcm"/>
+		android:src="@mipmap/fcm1" />
 
 	<LinearLayout
 		android:id="@+id/zoneCenter"
@@ -32,6 +35,7 @@
 			android:onClick="showToken"
 			android:text="@string/btn_show_token"/>
 
+<!--
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -50,26 +54,27 @@
 				android:onClick="unsubscribe"/>
 
 		</LinearLayout>
+-->
 
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:orientation="horizontal">
 
-			<Button
-				style="@style/CustomButton"
-				android:text="@string/btn_send_token"
-				android:onClick="sendToken"/>
+<!--			<Button-->
+<!--				style="@style/CustomButton"-->
+<!--				android:text="@string/btn_send_token"-->
+<!--				android:onClick="sendToken"/>-->
 
-			<Button
-				style="@style/CustomButton"
-				android:text="@string/btn_send_tokens"
-				android:onClick="sendTokens"/>
+<!--			<Button-->
+<!--				style="@style/CustomButton"-->
+<!--				android:text="@string/btn_send_tokens"-->
+<!--				android:onClick="sendTokens"/>-->
 
-			<Button
-				style="@style/CustomButton"
-				android:text="@string/btn_send_topic"
-				android:onClick="sendTopic"/>
+<!--			<Button-->
+<!--				style="@style/CustomButton"-->
+<!--				android:text="@string/btn_send_topic"-->
+<!--				android:onClick="sendTopic"/>-->
 
 		</LinearLayout>
 
