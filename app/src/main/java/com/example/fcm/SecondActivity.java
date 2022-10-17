@@ -9,15 +9,11 @@ public class SecondActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_second);
-
-		TextView txt = findViewById(R.id.textView);
-
 		Bundle bundle = getIntent().getExtras();
-		if (bundle != null) {
-			for (String key : bundle.keySet()) {
-				Object value = bundle.get(key);
-				txt.append(key + ": " + value + "\n\n");
-			}
-		}
+
+		TextView titleView = findViewById(R.id.titleView);
+		titleView.append(bundle.getString("title"));
+		TextView bodyView = findViewById(R.id.bodyView);
+		bodyView.append(bundle.getString("body"));
 	}
 }

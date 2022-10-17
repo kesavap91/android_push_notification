@@ -2,6 +2,7 @@ package com.example.fcm;
 
 import static com.example.fcm.R.id.txt;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -41,11 +42,17 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
+            Intent i = new Intent(MainActivity.this, SecondActivity.class);
+            i.putExtras(bundle);
+            startActivity(i);
             String tmp = "";
-            for (String key : bundle.keySet()) {
-                Object value = bundle.get(key);
-                tmp += key + ": " + value + "\n\n";
-            }
+            tmp += bundle.getString("title") + "\n";
+            tmp += bundle.getString("body") + "\n";
+//            tmp += bundle.getString("foo") + "\n";
+//            for (String key : bundle.keySet()) {
+//                Object value = bundle.get(key);
+//                tmp += key + ": " + value + "\n\n";
+//            }
             mTextView.setText(tmp);
         }
 
